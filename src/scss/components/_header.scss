@@ -7,11 +7,8 @@ header {
   position: sticky;
   top: 0;
 
-  // display: flex;
-  // align-items: center;
-  // justify-content: space-between;
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
+  display: flex;
+  justify-content: space-between;
   z-index: 10;
 
   a {
@@ -20,20 +17,23 @@ header {
   }
 
   .logo {
-    grid-column: span 2;
+    grid-column: span 6;
   }
+}
 
-  .socials {
-    grid-column: span 10;
-    display: flex;
+#secondary-nav {
+  display: flex;
 
-    justify-content: flex-end;
-    align-items: center;
+  justify-content: flex-end;
+  align-items: center;
 
-    a {
-      padding: 1rem;
-    }
+  a {
+    padding: 1rem;
   }
+}
+
+#open-nav {
+  margin-left: auto;
 }
 
 #main-nav {
@@ -41,8 +41,14 @@ header {
   backdrop-filter: blur(0.5rem);
   position: absolute;
   inset: 0 0 auto;
+  height: 100vh;
 
-  grid-column: 0 / 12;
+  transform: translateX(100%);
+  transition: transform 200ms ease;
+
+  &.active {
+    transform: translate(0);
+  }
 
   ul {
     margin: 0;
@@ -50,7 +56,7 @@ header {
     list-style: none;
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
+    text-align: right;
 
     li {
       display: flex;
@@ -60,7 +66,7 @@ header {
 
   li > a,
   li > button {
-    padding: 1rem;
+    padding: 1rem 2rem;
     display: block;
     width: 100%;
   }
@@ -70,17 +76,40 @@ header {
   }
 }
 
+.nav-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+}
+
 @media screen and (min-width: 60em) {
+  header {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+  }
+
+  #secondary-nav {
+    grid-column: span 6;
+  }
+
   #main-nav {
     background: transparent;
     backdrop-filter: none;
     position: relative;
+    height: max-content;
 
     grid-column: span 12;
+
+    transform: none;
     ul {
       flex-direction: row;
       justify-content: flex-end;
       align-items: center;
+    }
+
+    li > button,
+    li > a {
+      padding: 1rem;
     }
   }
 

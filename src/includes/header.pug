@@ -3,7 +3,7 @@ header
     //- img(src="https://smkmetland.net/ppdb/wp-content/uploads/2023/01/cropped-Metland_School__2_-removebg-preview-265x106.png" alt="logo SMK Metland yang jelek.")
     p ceritanya logo
   
-  section.socials
+  nav.socials#secondary-nav
     a(href="#") 
       i.fa-brands.fa-whatsapp
     a(href="#") 
@@ -12,14 +12,18 @@ header
       i.fa-brands.fa-facebook
     a(href="#") 
       i.fa-brands.fa-youtube
+    
+    button#open-nav open nav
 
   nav.main-nav#main-nav
     .nav-header
+      .logo
+        p ceritanya logo
       button#close-nav Close navbar
     
     ul
       li
-        button Tentang sekolah
+        button Tentang sekolah 
           i.fa-solid.fa-chevron-down
 
         ul 
@@ -54,4 +58,3 @@ header
         a(href="#") PPDB 
       li
         a(href="#") BKK
-  button#open-nav Open navbar
