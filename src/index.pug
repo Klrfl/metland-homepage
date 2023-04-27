@@ -17,42 +17,10 @@ html(lang="en")
 
     title SMK Pariwisata Metland School
   
-  body 
-    header
-      section.logo
-        //- img(src="https://smkmetland.net/ppdb/wp-content/uploads/2023/01/cropped-Metland_School__2_-removebg-preview-265x106.png" alt="logo SMK Metland yang jelek.")
-        p ceritanya logo
-      section.socials
-        a(href="") 
-          i.fa-brands.fa-whatsapp
-        a(href="") 
-          i.fa-brands.fa-instagram
-        a(href="")
-          i.fa-brands.fa-facebook
-        a(href="") 
-          i.fa-brands.fa-youtube
-      
-      nav.main-nav#main-nav
-        .nav-header
-          button#close-nav Close navbar
-        ul 
-          li
-            a(href="#") Beranda
-          li
-            button Tentang sekolah
-              i.fa-solid.fa-chevron-down
-          li
-            button Program Keahlian 
-              i.fa-solid.fa-chevron-down
-          li
-            button Kurikulum 
-              i.fa-solid.fa-chevron-down
-          li
-            a(href="#") Berita Sekolah
-          li
-            a(href="#") PPDB 
-          li
-            a(href="#") BKK
-      button#open-nav Open navbar
+  body
+    include ./includes/header.pug
 
-    h1 Hello
+    main
+      h1 Hello
+  
+  script(src="js/app.js") 
