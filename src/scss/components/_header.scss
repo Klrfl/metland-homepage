@@ -1,0 +1,8 @@
+@use "../abstracts/" as *;
+
+header {
+  background: $accent;
+  display: flex;
+  align-items: center;
+  padding: 2rem;
+}

@@ -1,7 +1,2 @@
-*{
-  box-sizing: border-box;
-}
-
-body{
-  // what the fuck
-}
+@use "abstracts" as *;
+@use "components";
