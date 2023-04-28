@@ -18,9 +18,14 @@ html(lang="en")
     title SMK Pariwisata Metland School
     
   body
-    include ./includes/header.pug
 
-    main
+    main.wrapper
+      include ./includes/header.pug
       include ./includes/hero.pug
+      include ./includes/infografi.pug
+      include ./includes/program-keahlian.pug
+      include ./includes/kerjasama-industri.pug
+    
+      include ./includes/footer.pug
     
     script(src="public/js/app.js" defer)
