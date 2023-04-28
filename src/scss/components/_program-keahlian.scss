@@ -1,0 +1,14 @@
+.jurusan {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+
+  &__card {
+    padding: 2rem;
+    outline: 2px solid;
+    // flex: 1 1 15ch;
+    min-width: 15ch;
+    aspect-ratio: 1/1;
+  }
+}
