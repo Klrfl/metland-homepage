@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "concurrently --kill-others \"pug --watch src/index.pug -o ./\" \"sass --watch src/scss:public/css\""
+    "dev": "concurrently --kill-others \"pug --watch src/index.pug -o ./\" \"sass --watch src/scss/style.scss:public/css/style.css\""
   },
   "author": "",
   "license": "ISC",
