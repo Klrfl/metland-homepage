@@ -89,11 +89,13 @@ header {
     background: #333;
     max-height: 0;
     overflow: hidden;
-    transition: max-height 200ms ease, visibility 200ms ease;
+    transition: max-height 200ms ease, visibility 200ms ease, opacity 200ms ease;
     visibility: hidden;
+    opacity: 0;
 
     &.active {
       max-height: 25rem;
+      opacity: 1;
       visibility: visible;
     }
   }
@@ -144,7 +146,6 @@ header {
     .main-nav__sub-menu {
       position: fixed;
       opacity: 0;
-      transition: opacity 200ms ease;
       transform: translateY(3rem);
 
       &:hover {
