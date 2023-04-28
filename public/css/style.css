@@ -10,6 +10,11 @@ body {
   font-family: "Montserrat", "Arial", sans-serif;
 }
 
+img {
+  display: block;
+  max-width: 100%;
+}
+
 button {
   all: unset;
   box-sizing: border-box;
@@ -24,8 +29,9 @@ header {
   background: #035757;
   color: #ddd;
   padding: 1rem 2rem;
-  position: sticky;
+  position: fixed;
   top: 0;
+  min-width: 100%;
   user-select: none;
   display: flex;
   justify-content: space-between;
@@ -160,6 +166,58 @@ header .logo {
   #open-nav {
     display: none;
   }
+}
+.wrapper {
+  max-height: 100vh;
+  overflow-y: auto;
+  perspective: 10px;
+}
+
+.hero {
+  min-height: 100vh;
+  transform-style: preserve-3d;
+  transform: translateZ(-10px) scale(2);
+  position: relative;
+  z-index: -1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.hero__image {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+}
+.hero__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero__text {
+  background: rgba(0, 0, 0, 0.6666666667);
+  backdrop-filter: blur(0.2rem);
+  color: #ddd;
+  margin: 0;
+  padding: 2rem;
+}
+
+.main-section {
+  background: #035757;
+  padding: 2rem;
+}
+
+.jurusan-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.jurusan {
+  padding: 2rem;
+  outline: 2px solid;
+  flex: 1 1 10ch;
 }
 
 /*# sourceMappingURL=style.css.map */
