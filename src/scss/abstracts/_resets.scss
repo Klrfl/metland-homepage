@@ -10,6 +10,11 @@ body {
   font-family: "Montserrat", "Arial", sans-serif;
 }
 
+img {
+  display: block;
+  max-width: 100%;
+}
+
 button {
   all: unset;
   box-sizing: border-box;
