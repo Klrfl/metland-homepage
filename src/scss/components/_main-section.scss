@@ -43,18 +43,20 @@
 }
 
 .main-section {
-  background: $accent;
+  background: #020202;
   padding: 2rem;
-}
+  color: #ddd;
 
-.jurusan-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
+  h2 {
+    position: relative;
 
-.jurusan {
-  padding: 2rem;
-  outline: 2px solid;
-  flex: 1 1 10ch;
+    &::before {
+      content: "";
+      background: $accent;
+      position: absolute;
+      bottom: -10px;
+      width: 100%;
+      height: 4px;
+    }
+  }
 }
