@@ -2,7 +2,7 @@
 
 header {
   background: $accent;
-  color: #ddd;
+  color: $text-color;
   padding: 1rem 2rem;
   position: fixed;
   top: 0;
@@ -21,7 +21,7 @@ header {
 
   a:hover,
   button:hover {
-    color: #efefef;
+    color: $text-color-hover;
   }
 
   .logo {

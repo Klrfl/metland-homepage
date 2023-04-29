@@ -1,4 +1,11 @@
 $accent: #035757;
+$accent-hover: #024141;
+
+$white-dark: #ddd;
+$white: #fefefe;
+
+$text-color: $white-dark;
+$text-color-hover: $white;
 
 @mixin card-container {
   display: flex;
