@@ -1,0 +1,10 @@
+@use "../abstracts/" as *;
+
+.company-container {
+  @include card-container;
+}
+
+.company-logo {
+  @include card;
+  flex: 1 1 0;
+}
