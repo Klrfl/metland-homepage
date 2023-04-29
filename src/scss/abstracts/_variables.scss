@@ -1,1 +1,15 @@
 $accent: #035757;
+
+@mixin card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+@mixin card {
+  outline: 2px solid #444;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  text-align: center;
+}
