@@ -7,19 +7,23 @@
 }
 
 .hero {
-  // background-image: url("../../../assets/hero-image.jpeg");
   min-height: 100vh;
-  // background-repeat: no-repeat;
-  // background-size: cover;
 
   transform-style: preserve-3d;
-  transform: translateZ(-20px) scale(3);
+  transform: translateZ(-20px) translateX(-20px) scale(3);
   position: relative;
   z-index: -1;
 
   display: flex;
   justify-content: center;
   align-items: flex-end;
+}
+
+// firefox only
+@-moz-document url-prefix() {
+  .hero {
+    transform: translateZ(-20px) scale(3);
+  }
 }
 
 .hero__image {
@@ -35,11 +39,21 @@
 }
 
 .hero__text {
-  background: linear-gradient(to top, #1b1b1b, #1b1b1b 40%, #0000);
+  background: linear-gradient(to top, #1b1b1b, #1b1b1baa 70%, #0000);
   backdrop-filter: blur(0.1rem);
   color: #ddd;
   margin: 0;
   padding: 2rem;
+}
+
+#daftar {
+  background: $accent;
+  padding: 1rem 2rem;
+  border-radius: 2rem;
+
+  &:hover {
+    background: $accent-hover;
+  }
 }
 
 .main-section {
