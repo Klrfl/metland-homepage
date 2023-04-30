@@ -15,7 +15,6 @@ $text-color-hover: $white;
 }
 
 @mixin card {
-  outline: 2px solid #444;
   padding: 2rem;
   border-radius: 0.5rem;
   text-align: center;

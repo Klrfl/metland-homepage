@@ -4,26 +4,20 @@
   max-height: 100vh;
   overflow-y: auto;
   perspective: 10px;
+  transform-style: preserve-3d;
 }
 
 .hero {
   min-height: 100vh;
 
-  transform-style: preserve-3d;
-  transform: translateZ(-20px) translateX(-20px) scale(3);
+  // transform: translateZ(-20px) translateX(-20px) scale(3);
+  transform: translateZ(-20px) scale(3);
   position: relative;
   z-index: -1;
 
   display: flex;
   justify-content: center;
   align-items: flex-end;
-}
-
-// firefox only
-@-moz-document url-prefix() {
-  .hero {
-    transform: translateZ(-20px) scale(3);
-  }
 }
 
 .hero__image {

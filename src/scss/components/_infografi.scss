@@ -3,6 +3,7 @@
 .infografi {
   @include card-container;
   &__card {
+    outline: 2px solid #444;
     @include card;
   }
 }
