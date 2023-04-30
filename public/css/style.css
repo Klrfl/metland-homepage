@@ -8,11 +8,34 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Montserrat", "Arial", sans-serif;
+  line-height: 1.6;
 }
 
-img {
+img,
+picture,
+video,
+canvas,
+svg {
   display: block;
   max-width: 100%;
+  height: auto;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
 }
 
 button {
@@ -188,12 +211,12 @@ header .logo {
   max-height: 100vh;
   overflow-y: auto;
   perspective: 10px;
+  transform-style: preserve-3d;
 }
 
 .hero {
   min-height: 100vh;
-  transform-style: preserve-3d;
-  transform: translateZ(-20px) translateX(-20px) scale(3);
+  transform: translateZ(-20px) scale(3);
   position: relative;
   z-index: -1;
   display: flex;
@@ -201,11 +224,18 @@ header .logo {
   align-items: flex-end;
 }
 
-@-moz-document url-prefix() {
-  .hero {
-    transform: translateZ(-20px) scale(3);
-  }
+.hero__text {
+  background: linear-gradient(to top, rgba(27, 27, 27, 0.6666666667), rgba(27, 27, 27, 0));
+  backdrop-filter: blur(0.5rem) brightness(0.2);
+  color: #ddd;
+  margin: 0;
+  padding: 2rem;
+  flex-grow: 1;
 }
+.hero__text p {
+  max-width: 75ch;
+}
+
 .hero__image {
   position: absolute;
   inset: 0;
@@ -215,14 +245,6 @@ header .logo {
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
-
-.hero__text {
-  background: linear-gradient(to top, #1b1b1b, rgba(27, 27, 27, 0.6666666667) 70%, rgba(0, 0, 0, 0));
-  backdrop-filter: blur(0.1rem);
-  color: #ddd;
-  margin: 0;
-  padding: 2rem;
 }
 
 #daftar {
@@ -265,10 +287,10 @@ header .logo {
 .jurusan__card {
   color: inherit;
   text-decoration: none;
-  outline: 2px solid #444;
   padding: 2rem;
   border-radius: 0.5rem;
   text-align: center;
+  outline: 2px solid #444;
   min-width: 15ch;
   aspect-ratio: 1/1;
   transition: transform 200ms cubic-bezier(0, 1, 0.7, 1.5), outline 200ms ease;
@@ -286,11 +308,15 @@ header .logo {
 }
 
 .company-logo {
-  outline: 2px solid #444;
   padding: 2rem;
   border-radius: 0.5rem;
   text-align: center;
   flex: 1 1 0;
+  background: #232323;
+}
+.company-logo:hover {
+  background: #333;
+  cursor: pointer;
 }
 
 .footer {
