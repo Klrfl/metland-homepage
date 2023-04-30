@@ -1,3 +1,4 @@
+// https://www.joshwcomeau.com/css/custom-css-reset/
 *,
 *::before,
 *::after {
@@ -8,11 +9,34 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Montserrat", "Arial", sans-serif;
+  line-height: 1.6;
 }
 
-img {
+img,
+picture,
+video,
+canvas,
+svg {
   display: block;
   max-width: 100%;
+  height: auto;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
 }
 
 button {
