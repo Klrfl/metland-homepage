@@ -20,6 +20,19 @@
   align-items: flex-end;
 }
 
+.hero__text {
+  background: linear-gradient(to top, #1b1b1b, #1b1b1baa 60%, #0000);
+  backdrop-filter: blur(0.1rem);
+  color: #ddd;
+  margin: 0;
+  padding: 2rem;
+  flex-grow: 1;
+
+  p {
+    max-width: 75ch;
+  }
+}
+
 .hero__image {
   position: absolute;
   inset: 0;
@@ -30,14 +43,6 @@
     height: 100%;
     object-fit: cover;
   }
-}
-
-.hero__text {
-  background: linear-gradient(to top, #1b1b1b, #1b1b1baa 70%, #0000);
-  backdrop-filter: blur(0.1rem);
-  color: #ddd;
-  margin: 0;
-  padding: 2rem;
 }
 
 #daftar {
